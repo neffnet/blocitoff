@@ -5,10 +5,35 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+  <div class="main">
+
+    <div id="top-nav">
+      <% if current_user %>
+        <span id="logo">"BlocItOff Logo"</span>
+        <span id="current-user">
+          <%= current_user.name %>, let's get something done!<br />
+          <%= link_to "Settings", edit_user_registration_path, class: 'btn' %> | <%= link_to "Sign Out", destroy_user_session_path, class: 'btn', method: :delete %>
+        </span>
+      <% else %>
+        <%= render "welcome/sign_in" %>
+        <span id="logo">"BlocItOff Logo"</span>
+      <% end %>
+    </div>
+
+    <div id="flash_messages">
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <% elsif flash[:error] %>
+        <%= flash[:error] %>
+      <% elsif flash[:alert] %>
+        <%= flash[:alert] %>
+      <% end %>
+    </div>
 
 <%= yield %>
-
+  </div>
 </body>
 </html>
