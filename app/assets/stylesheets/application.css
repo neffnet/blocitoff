@@ -6,13 +6,55 @@
 *= require_tree .
 */
 
+* {
+  border-color: #E8DDCB;
+}
+
 body {
+  background-color: #033649;
+}
+input {color: #031634}
+
+#main {
   color: #cdb380;
-  background-color: #031634;
-  padding: 10px;
+  padding: 16px;
+  margin: 10px;
+}
+
+#main div {
+  border-style: solid;
+  border-width: 2px;
+  margin: 5px;
+  padding: 4px;
+}
+#main div div, #main div span {
+  border-style: solid;
+  border-width: 2px;
+  margin: 3px;
+  padding: 2px;
+}
+
+.logo {
+  height: 50px;
+  float: right;
+}
+
+.btn, input[type="submit"] {
+  background-color: #E8DDCB;
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 3px;
+  padding: 5px;
+  text-align: center;
+  color: #031634;
+}
+.btn:hover, input[type="submit"]:hover {
+  border-color: #036564;
 }
 
 .b {
   font-style: italic;
-  letter-spacing: .3em;
+  letter-spacing: .25em;
 }
+
+.alert { border-color: #FF3649;}

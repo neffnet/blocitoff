@@ -8,32 +8,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <div class="main">
+  <div id="main">
 
     <div id="top-nav">
       <% if current_user %>
-        <span id="logo">"BlocItOff Logo"</span>
         <span id="current-user">
-          <%= current_user.name %>, let's get something done!<br />
+          <%= current_user.name %>, get something done || 
           <%= link_to "Settings", edit_user_registration_path, class: 'btn' %> | <%= link_to "Sign Out", destroy_user_session_path, class: 'btn', method: :delete %>
         </span>
       <% else %>
         <%= render "welcome/sign_in" %>
-        <span id="logo">"BlocItOff Logo"</span>
       <% end %>
+      <span class="logo">"BLOCITOFF logo"</span>
     </div>
 
-    <div id="flash_messages">
-      <% if flash[:notice] %>
-        <%= flash[:notice] %>
-      <% elsif flash[:error] %>
-        <%= flash[:error] %>
-      <% elsif flash[:alert] %>
-        <%= flash[:alert] %>
-      <% end %>
-    </div>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
 
 <%= yield %>
+
   </div>
 </body>
 </html>
