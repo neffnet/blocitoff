@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @user = User.find(params[:id])
+    if params[:id].nil?
+      @user = current_user
+    else
+      @user = User.find(params[:id])
+    end
   end
 end

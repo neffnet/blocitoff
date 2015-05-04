@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { confirmations: 'confirmations' }
     resources :users, only: [:show]
 
-    
-  root to: "welcome#index"
+authenticated :user do
+  root to: "users#show"
+end
+unauthenticated :user do    
+  get "/" => "welcome#index"
+end
+
 end
