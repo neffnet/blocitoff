@@ -78,7 +78,7 @@ a:visited{color: #cd7ec0;}
 #desc p {
   margin-left: 10px;
 }
-#desc .btn[:hover] { border-color: #033649; }
+#desc .btn:hover { border-color: #033649; }
 
 .crazy {
   font-size: 1.3em;
