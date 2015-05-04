@@ -6,50 +6,45 @@
 *= require_tree .
 */
 
-* {
-  border-color: #E8DDCB;
-}
-
 body {
   background-color: #033649;
 }
+
 input {color: #031634}
+
+a {color: #036564;}
+a:visited{color: #cd7ec0;}
+
+#top-nav h3 {
+  font-size: .8em;
+  margin-bottom: -5px;
+}
 
 #main {
   color: #cdb380;
-  padding: 16px;
-  margin: 10px;
-}
-
-#main div {
-  border-style: solid;
-  border-width: 2px;
-  margin: 5px;
-  padding: 4px;
-}
-#main div div, #main div span {
-  border-style: solid;
-  border-width: 2px;
-  margin: 3px;
-  padding: 2px;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .logo {
-  height: 50px;
-  float: right;
+  float: left;
 }
 
 .btn, input[type="submit"] {
   background-color: #E8DDCB;
   border-style: solid;
-  border-width: 6px;
-  border-radius: 3px;
-  padding: 5px;
+  border-color: #E8DDCB;
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 4px;
   text-align: center;
   color: #031634;
+  text-decoration: underline;
 }
 .btn:hover, input[type="submit"]:hover {
   border-color: #036564;
+  text-decoration: underline;
 }
 
 .b {
@@ -57,4 +52,39 @@ input {color: #031634}
   letter-spacing: .25em;
 }
 
-.alert { border-color: #FF3649;}
+.alert {
+  color: #FF3649;
+  margin-bottom: -15px;
+}
+
+#desc {
+  position: relative;
+  top: -10px;
+  left: 100px;
+  margin-top: 40px;
+  background-color: #036564;
+  width: 60%;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 1.2em;
+  border-radius: 22px / 40px;
+}
+#desc h2 {
+  font-size: 1.2em;
+  text-align: center;
+  color: #E8DDCB;
+  text-decoration: underline;
+}
+#desc p {
+  margin-left: 10px;
+}
+#desc .btn[:hover] { border-color: #033649; }
+
+.crazy {
+  font-size: 1.3em;
+  color: #FF3649;
+  text-align: center;
+  margin: -5px;
+}
+
+.center {text-align: center;}

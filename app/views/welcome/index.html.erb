@@ -1,9 +1,12 @@
-<div id="hello">
-  <h1><span class="b">BlocItOff</span></h1>
-  <h2>a TODO list that always stays important</h2>
-</div>
-
-<div><p>Describing Blocitoff here</p></div>
+<!-- hidden modal -->
 <%= render 'sign_up' %>
-<%= link_to_modal "Sign Up", "#sign_up", :class => "btn" %>
-<div><p>a footer down here</p></div>
+
+<div id="desc">
+  <h2><em>BlocItOff</em> is for people who have things they need to do.</h2>
+  <p>Sometimes, we have a lot of things we need to do, and it can be hard to tell right away which items are the most pressing. You need to fix that broken spoke in your bicycle wheel, polish up the kitchen cabinet handles, teach your dog Spanish. <em>BlocItOff</em> tracks your TODO list, and automatically removes an item if you don't get to it yourself within seven days.</p>
+  <p class="crazy">"Why would we want that?!"</p>
+  <p>Well, if you were able to let it slide for a whole week, it must not have been very important. So finish it or we'll delete it!</p>
+  <p>It's time you ride the new wave of self-completing TODO lists. Add your items. Mark them complete when you've taken care of them. Or don't, and we'll do it for you. <em>You've never been so productive!</em></p>
+  <div class="center"><%= link_to_modal "Sign Up Now", "#sign_up", :class => "btn" %></div>
+  <p><em>BlocItOff</em>: the TODO list that always stays important.</p>
+</div>
