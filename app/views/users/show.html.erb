@@ -1,11 +1,10 @@
 <div id="user-show">
 	<% if @items.any? %>
-		<h2>Let's get these things done:</h2>
-		<%= content_tag(:ul, :id => 'todo-list') do %>
-			<% @items.each do |item| %>
-				<%= concat content_tag(:li, item.name) %>
-			<% end %>
-		<% end %>
+		<div id="todo"><h2>Let's get these things done:</h2>
+			<ul id="todo-list">
+				<%= render @items %>
+			</ul>
+		</div>
 	<% else %>
 		<p id="no-items">You haven't created any to-do items yet. Try typing "Create my first BlocItOff item" in the text area below and click save:</p>
 	<% end %>

@@ -95,6 +95,10 @@ a:hover { color: #FF3649; }
   margin-left: 10px;
 }
 
+#user-show {
+  margin: 80px 0px 0px 150px;
+}
+
 .crazy {
   font-size: 1.3em;
   color: #FF3649;
