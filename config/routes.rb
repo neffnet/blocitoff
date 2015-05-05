@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { confirmations: 'confirmations' }
-    resources :users, only: [:show]
+  get 'items/create'
 
-authenticated :user do
-  root to: "users#show"
-end
-unauthenticated :user do    
-  get "/" => "welcome#index"
-end
+  devise_for :users, controllers: { confirmations: 'confirmations' }
+
+  resources :users, only: [:show] do
+  	resources :items, only: [:create]
+  end
+
+	authenticated :user do
+  		root to: "users#show"
+	end
+	unauthenticated :user do    
+  		get "/" => "welcome#index"
+	end
 
 end

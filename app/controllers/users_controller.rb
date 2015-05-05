@@ -7,5 +7,6 @@ class UsersController < ApplicationController
     else
       @user = User.find(params[:id])
     end
+    @items = @user.items
   end
 end
