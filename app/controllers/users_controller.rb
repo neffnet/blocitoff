@@ -8,5 +8,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
     @items = @user.items
+    @item = Item.new
+    @item.user = current_user
   end
 end

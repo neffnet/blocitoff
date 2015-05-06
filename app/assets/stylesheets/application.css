@@ -56,6 +56,10 @@ a:visited {color: #031634;}
   margin-right: 15px;
 }
 
+#container {
+  margin-left: 5%;
+}
+
 .logo {
   position: absolute;
   top: 10px;
@@ -95,9 +99,9 @@ a:visited {color: #031634;}
   background-color: #E8DDCB;
   border-style: solid;
   border-color: #033649;
-  border-width: 3px;
+  border-width: 4px;
   border-radius: 10px;
-  padding: 2px 9px 2px 9px;
+  padding: 4px 10px 4px 10px;
   text-align: center;
   color: #031634;
   text-decoration: underline;
@@ -112,12 +116,9 @@ a:hover { color: #FF3649; }
 
 .alert {
   color: #FF3649;
-  margin-bottom: -15px;
 }
 
 #desc {
-  position: relative;
-  left: 7%;
   margin-top: 30px;
   background-color: #036564;
   width: 72%;
@@ -135,15 +136,45 @@ a:hover { color: #FF3649; }
   margin-left: 10px;
 }
 
-#user-show {
-  margin: 80px 0px 0px 150px;
-}
-
 .crazy {
   font-size: 1.3em;
   color: #FF3649;
   text-align: center;
   margin: -5px;
 }
+
+#todo {
+  margin: 10px;
+  width: 66%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 40px / 18px;
+  padding: 5px 0px 5px 10px;
+}
+
+#todo-list {
+  font-size: 1.5em;
+}
+.todo-item {
+  background-color: #CDB380;
+  padding: 12px 12px 12px 40px;
+  color: #036564;
+  border-radius: 20px;
+  width: 75%;
+  margin: 10px;
+}
+
+#new_item input[type="text"]{
+  padding: 10px;
+  border: solid 5px #036564;
+  transition: border 0.3s;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 2em;
+}
+#new_item input[type="text"]:focus,
+#new_item input[type="text"].focus {
+  border: solid 5px #e8ddcb;
+} 
 
 .center {text-align: center;}

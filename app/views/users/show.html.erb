@@ -6,8 +6,11 @@
 			</ul>
 		</div>
 	<% else %>
-		<p id="no-items">You haven't created any to-do items yet. Try typing "Create my first BlocItOff item" in the text area below and click save:</p>
+		<h2>You really don't have anything to do?</h2>
+		<p id="no-items">Try typing "Create my first BlocItOff item" in the text area below:</p>
 	<% end %>
+
+	<%= render 'items/form' %>
 </div>
 
 <!-- hidden modal -->

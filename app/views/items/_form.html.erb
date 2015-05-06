@@ -1,0 +1,6 @@
+<%= form_for @item, url: items_create_path, method: :get do |f| %>
+
+    <%= f.text_field :name, placeholder: 'I need to...' %>
+
+    <%= f.submit 'Save', class: 'btn' %>
+<% end %>
