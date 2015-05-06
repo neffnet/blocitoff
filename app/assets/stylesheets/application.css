@@ -13,14 +13,20 @@ body {
 input {color: #031634}
 
 a {color: #036564;}
-a:visited{color: #031634;}
+a:visited {color: #031634;}
 
 #top-nav {
   margin-top: 10px;
+  width: 75%;
 }
 
 #top-nav h3 {
   font-size: .8em;
+}
+
+#login-top {
+  position: relative;
+  left: 190px;
 }
 
 #login-top form {
@@ -31,7 +37,16 @@ a:visited{color: #031634;}
 
 #current-user {
   position: relative;
-  top: 10px;
+  left: 200px;
+  top: -10px;
+}
+#current-user p {
+  font-size: 2em;
+}
+#top-buttons {
+  position: relative;
+  top: -15px;
+  left: 20px;
 }
 
 #main {
@@ -42,12 +57,28 @@ a:visited{color: #031634;}
 }
 
 .logo {
-  float: left;
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
 .flash {
   position: relative;
-  top: 10px;
+  left: 188px;
+  top: -5px;
+}
+
+#sign_up {
+  width: 325px;
+  color: #031634;
+}
+#sign_up h2 {
+  position: relative;
+  top: -10px;
+}
+#sign_up .field {
+  position: relative;
+  top: -16px;
 }
 
 .btn, input[type="submit"] {
@@ -62,7 +93,7 @@ a:visited{color: #031634;}
   text-decoration: underline;
 }
 .btn:hover, input[type="submit"]:hover {
-  border-color: #FF3649;
+  border-color: #cdb380;
   text-decoration: underline;
   color: #031634;
 }
@@ -76,9 +107,8 @@ a:hover { color: #FF3649; }
 
 #desc {
   position: relative;
-  top: -10px;
-  left: 100px;
-  margin-top: 40px;
+  left: 7%;
+  margin-top: 30px;
   background-color: #036564;
   width: 72%;
   padding: 12px 24px 12px 24px;
