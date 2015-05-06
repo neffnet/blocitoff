@@ -68,17 +68,27 @@ a:visited {color: #031634;}
   top: -5px;
 }
 
-#sign_up {
+.mod {
   width: 325px;
   color: #031634;
 }
-#sign_up h2 {
+.mod h2 {
   position: relative;
   top: -10px;
 }
-#sign_up .field {
+.mod .field {
   position: relative;
   top: -16px;
+}
+
+#settings input[type="submit"] {
+  background-color: red;
+}
+
+#settings input[type="submit"]:first-child {
+  position: relative;
+  top: -8px;
+  background-color: #E8DDCB;
 }
 
 .btn, input[type="submit"] {

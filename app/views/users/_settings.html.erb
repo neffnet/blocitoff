@@ -1,0 +1,39 @@
+<div id="settings" class="mod" style="display: none;">
+
+	<h2>Edit User Info</h2>
+
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+	  <%= devise_error_messages! %>
+
+	  <div class="field">
+	    <%= f.label :name %>:<br />
+	    <%= f.text_field :name, :value => current_user.name %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :email %>:<br />
+	    <%= f.email_field :email, autofocus: true, value: current_user.email %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :password %>: <small>(leave blank if you don't want it to change)</small><br />
+	    <%= f.password_field :password, autocomplete: "off", placeholder: 'New password' %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :password_confirmation %>:<br />
+	    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirm new password' %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :current_password %>: <small>(we need your current password to confirm your changes)</small><br />
+	    <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password" %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit "Update" %>
+	  </div>
+	<% end %>
+	<%= button_to "Delete my account!", registration_path(resource_name), data: { confirm: "Are you sure you want to delete your BlocItOff account?" }, method: :delete %>
+
+</div>
