@@ -178,3 +178,5 @@ a:hover { color: #FF3649; }
 } 
 
 .center {text-align: center;}
+
+.hidden {visibility: hidden }
