@@ -20,7 +20,7 @@ u.items.each { |i| i.delete }
 5.times do
 	u = User.find_by_email('user@example.com') 
 	i = Item.create(user: u, name: Faker::Hacker.say_something_smart)
-	i.created_at = Faker::Time.between(10.days.ago, Time.now)
+	i.update_attributes!(created_at: Faker::Time.between(10.days.ago, Time.now))
 end
 
 puts "created a Test User with id=#{u.id} and #{u.items.length} items."
