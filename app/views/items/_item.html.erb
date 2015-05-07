@@ -5,4 +5,6 @@
 				<% end %>
 			<% end %>
 	<%= item.name %>
+	<%= content_tag :span, "#{item.days_left}", class: ['days-left', item.color] %>
+	<small>days left</small> 
 </li>

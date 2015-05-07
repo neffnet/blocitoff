@@ -197,6 +197,33 @@ a:hover { color: #FF3649; }
   position: relative;
   bottom: 7px;
 }
+
+.days-left {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  margin-top: -35px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 45px;
+  color: #e8ddcb
+}
+
+.todo-item small {
+  position: absolute;
+  right: -64px;
+  top: 55px;
+  font-size: 50%;
+  color: #e8ddcb;
+}
+
+.red {background-color: #650304;}
+.yellow {background-color: #bdbb05;}
+.green {background-color: #068b04;}
+
 .del-item:hover {
   color: #ff3649;
 } 
