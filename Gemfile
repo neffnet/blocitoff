@@ -53,5 +53,8 @@ group :development, :test do
 
   # Generates fake data
   gem 'faker'
+
+  # create cron jobs
+  gem 'whenever'
 end
 
