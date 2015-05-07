@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { confirmations: 'confirmations' }
 
   resources :users, only: [:show] do
-  	resources :items, only: [:create]
+  	resources :items, only: [:create, :destroy]
   end
 
 	authenticated :user do

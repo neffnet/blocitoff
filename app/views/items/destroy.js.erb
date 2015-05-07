@@ -1,0 +1,7 @@
+<% if @item.destroyed? %>
+	$('#item-' + <%= @item.id %>).animate({left: '-1000px'}, 600, function(){
+		$('#item-' + <%= @item.id %>).remove();
+	});
+<% else %>
+	<% flash[:error] = "error removing item, please try again" %>
+<% end %>

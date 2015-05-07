@@ -157,13 +157,15 @@ a:hover { color: #FF3649; }
 }
 .todo-item {
   background-color: #CDB380;
-  padding: 12px 12px 12px 40px;
+  padding: 12px 80px 12px 40px;
   color: #036564;
   border-radius: 20px;
-  width: 75%;
+  width: 72%;
   margin: 10px;
+  position: relative;
 }
 
+#new_item {margin: 8px;}
 #new_item input[type="text"]{
   padding: 10px;
   border: solid 5px #036564;
@@ -175,6 +177,28 @@ a:hover { color: #FF3649; }
 #new_item input[type="text"]:focus,
 #new_item input[type="text"].focus {
   border: solid 5px #e8ddcb;
+}
+
+.del-item {
+  float: right;
+  color: #cd7ec0;
+  font-size: 2em;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  height: 42px;
+  margin-top: -23px;
+}
+.x {
+  position: relative;
+  bottom: 7px;
+}
+.del-item:hover {
+  color: #ff3649;
 } 
 
 .center {text-align: center;}

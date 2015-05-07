@@ -1,8 +1,8 @@
 if ( <%= @item.user.items.length %> == 1 ) { $(location).attr('href', '<%= root_path %>') }
 else{
 	$("#todo-list").append(
-		'<%= j content_tag(:li, @item.name, class: "hidden todo-item", id: "item-#{@item.id}") %>'
+		'<%= j render @item %>'
 	);
 	$("#item_name").val('');
-	$("#item-" + <%= @item.id %>).css("visibility", "visible").hide().fadeIn(1666);
+	$("#item-" + <%= @item.id %>).css("visibility", "visible").hide().fadeIn(1066);
 }

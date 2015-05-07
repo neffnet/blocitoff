@@ -1,2 +1,8 @@
-<li class="todo-item" id="item-#{item.id}"><%= item.name %></li>
-		
+<li class="todo-item" id="item-<%= item.id %>">
+			<%= link_to user_item_path(current_user,item), method: :delete, remote: true do %>
+				<%= content_tag :span, class: 'del-item' do %>
+					<%= content_tag :span, '&times;'.html_safe, class: 'x' %>
+				<% end %>
+			<% end %>
+	<%= item.name %>
+</li>
